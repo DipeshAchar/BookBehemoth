@@ -1,0 +1,278 @@
+<!--
+      
+      Projec Assignment 2
+      Author: Dev Shankar Acharya, Sikha Sikha
+      Date:   11/07/2022
+
+      Filename:   book-details.html.html
+
+   -->
+
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Details</title>
+	<link rel="stylesheet" href="bookstyle.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/770c203d66.js" crossorigin="anonymous"></script>
+	<!-- Embeded Style -->
+	<style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+        
+        .navbar a:hover{
+            background-color: skyblue;
+            color: white;
+        }
+
+        .navbar a:active{
+            background-color:darkgray;
+            color: white;
+    
+            }
+        
+                
+       
+        .dropbtn {
+          background-color:#EDEAE5;
+          color: #555;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+        }
+
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        
+        .dropdown-content {
+          display: none;
+          position: fixed;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+       
+        .dropdown-content a:hover {background-color: #ddd; color:white}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {display: block;}
+
+        
+        .dropdown:hover .dropbtn {background-color: skyblue; color:white}
+
+        
+    </style>
+</head>
+<body>
+	
+	<div class="header">
+	<div class="container">
+		<div class="navbar">
+		<div class="logo">
+			<a href="index.html"><img src="Images/BookLand - Logo (Black).png" width="125px"></a>
+		</div>
+		<nav>
+			<ul id="MenuItems">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="books.html">Books</a></li>
+				<li><a href="account.html">Account</a></li>
+				<li>
+				    <div class="dropdown">
+				    <button class="dropbtn">More <i class="fa-solid fa-caret-down"></i></button>
+				        <div class="dropdown-content">
+                            <a href="about.html">About</a>
+                            <a href="contact.html">Contact</a>
+				            </div>
+				        </div>
+				</li>
+			<?php if(isset($_SESSION["userName"])){ ?><li><a href="logout.php"></a></li> <?php } ?>
+			</ul>
+		</nav>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping" width="30px" height="30px"></i></a>
+			<img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
+		</div>
+	
+	</div>
+
+	
+
+<!--------------------single product details---------------------->
+	
+	<div class="small-container single-product">
+		<div class="row">
+			<div class="col-2">
+				<img src="Images/howtoread.jpg" width="70%">
+			</div>
+			<div class="col-2">
+				<p>Home / Fictional</p>
+				<h1>How to Read</h1>
+				<h4>$50.00</h4>
+				<input type="number" value="1">
+				<a href="" class="btn">Add To Cart</a>
+				
+				<h3>Book Details <i class="fa fa-indent"></i></h3>
+				<br>
+				<p>Best Book. </p>
+			</div>
+		</div>
+	</div>
+	
+	
+<!------------------------title----------------------------->
+	
+	<div class="small-container">
+		<div class="row row-2">
+			<h2>Related Products</h2>
+			<p>View More</p>
+		</div>
+	</div>
+
+	
+	
+<!--------------------related products---------------------->
+	
+	<div class="small-container">
+		
+		<div class="row">
+			<div class="col-4">
+				<img src="Images/howtotalk.jpg">
+				<h4>How to Talk</h4>
+				<div class="rating">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+				</div>
+				<p>$50.00</p>
+			</div>
+			
+			<div class="col-4">
+				<img src="Images/theart.jpg">
+				<h4>The Art of Saying NO</h4>
+				<div class="rating">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+				</div>
+				<p>$50.00</p>
+			</div>
+			
+			<div class="col-4">
+				<img src="Images/criticalthinkers.jpg">
+				<h4>Critical Thinkers</h4>
+				<div class="rating">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+				</div>
+				<p>$50.00</p>
+			</div>
+			
+			<div class="col-4">
+				<img src="Images/aristotle.jpg">
+				<h4>Aristotle</h4>
+				<div class="rating">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+				</div>
+				<p>$50.00</p>
+			</div>
+		</div>
+		
+			
+
+		
+		
+	</div>
+
+<!-----------------------footer--------------------------->
+	
+	
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download Our App</h3>
+					<p>Download App for Android and ios mobile phone.</p>
+					<div class="app-logo">
+						<img src="Images/play-store.png">
+						<img src="Images/app-store.png">
+					</div>
+				</div>
+				<div class="footer-col-2">
+					<img src="Images/BookLand - Logo (White).png">
+					<p>Our Purpose Is To give you good reading experience
+						<br>Our Books are helpful to many.</p>
+				</div>
+				<div class="footer-col-3">
+					<h3>Helpful Connections</h3>
+					<ul>
+						<li>Blogs</li>
+						<li>Our Affiliate</li>
+					</ul>
+				</div>
+				<div class="footer-col-4">
+					<h3>Follow Us</h3>
+					<ul>
+						
+					</ul>
+				</div>
+			</div>
+			<hr>
+			
+		</div>
+	</div>
+	
+<!-----------------------js for toggle menu--------------------------->
+	
+	<script>
+		var MenuItems = document.getElementById("MenuItems");
+		MenuItems.style.maxHeight= "0px";
+		
+			
+		function menutoggle(){
+			if(MenuItems.style.maxHeight == "0px")
+				{
+					MenuItems.style.maxHeight = "200px";
+				}
+			else
+				{
+					MenuItems.style.maxHeight = "0px";
+				}
+		} 
+		
+	</script>
+
+
+</body>
+</html>
